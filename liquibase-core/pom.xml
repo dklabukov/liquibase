@@ -343,6 +343,7 @@
                 </plugins>
             </build>
         </profile>
+    </profiles>
 
     <pluginRepositories>
         <pluginRepository>
