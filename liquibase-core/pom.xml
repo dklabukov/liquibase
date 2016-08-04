@@ -358,4 +358,21 @@
         </snapshotRepository>
     </distributionManagement>
 
+    <pluginRepositories>
+        <pluginRepository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>central</id>
+            <name>plugins-release</name>
+            <url>https://artifactory.tprs.ru/artifactory/plugins-release</url>
+        </pluginRepository>
+        <pluginRepository>
+            <snapshots />
+            <id>snapshots</id>
+            <name>plugins-snapshot</name>
+            <url>https://artifactory.tprs.ru/artifactory/plugins-snapshot</url>
+        </pluginRepository>
+    </pluginRepositories>
+
 </project>
