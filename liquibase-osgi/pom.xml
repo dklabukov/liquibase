@@ -9,12 +9,12 @@
     <parent>
         <groupId>org.liquibase</groupId>
         <artifactId>liquibase-parent</artifactId>
-        <version>3.3.0</version>
+        <version>3.3.0-sintkom</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <properties>
-        <liquibase.version>3.3.0</liquibase.version>
+        <liquibase.version>3.3.0-sintkom</liquibase.version>
     </properties>
 
     <dependencies>

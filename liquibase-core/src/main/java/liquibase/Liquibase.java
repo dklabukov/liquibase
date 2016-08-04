@@ -1033,14 +1033,14 @@ public class Liquibase {
 
     public void generateDocumentation(String outputDirectory) throws LiquibaseException {
         // call without context
-        generateDocumentation(outputDirectory, new Contexts(), new LabelExpression());
+        generateDocumentation(outputDirectory, new Contexts(), new LabelExpression(), null);
     }
 
     public void generateDocumentation(String outputDirectory, String contexts) throws LiquibaseException {
-        generateDocumentation(outputDirectory, new Contexts(contexts), new LabelExpression());
+        generateDocumentation(outputDirectory, new Contexts(contexts), new LabelExpression(), null);
     }
 
-    public void generateDocumentation(String outputDirectory, Contexts contexts, LabelExpression labelExpression) throws LiquibaseException {
+    public void generateDocumentation(String outputDirectory, Contexts contexts, LabelExpression labelExpression, String filter) throws LiquibaseException {
         log.info("Generating Database Documentation");
         changeLogParameters.setContexts(contexts);
         changeLogParameters.setLabels(labelExpression);
@@ -1059,7 +1059,12 @@ public class Liquibase {
             DBDocVisitor visitor = new DBDocVisitor(database);
             logIterator.run(visitor, new RuntimeEnvironment(database, contexts, labelExpression));
 
-            visitor.writeHTML(new File(outputDirectory), resourceAccessor);
+            if (filter != null && filter.length() > 0) {
+                String[] filters = filter.split(";");
+                visitor.writeHTML(new File(outputDirectory), resourceAccessor, filters);
+            } else {
+                visitor.writeHTML(new File(outputDirectory), resourceAccessor, null);
+            }
         } catch (IOException e) {
             throw new LiquibaseException(e);
         } finally {

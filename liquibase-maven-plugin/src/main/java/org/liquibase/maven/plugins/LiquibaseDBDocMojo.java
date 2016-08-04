@@ -1,5 +1,7 @@
 package org.liquibase.maven.plugins;
 
+import liquibase.Contexts;
+import liquibase.LabelExpression;
 import liquibase.Liquibase;
 import liquibase.exception.LiquibaseException;
 
@@ -18,11 +20,17 @@ public class LiquibaseDBDocMojo extends AbstractLiquibaseChangeLogMojo {
      */
     private String outputDirectory;
 
+    /**
+     * @parameter
+     *      expression="${liquibase.filter}"
+     *      default-value=""
+     */
+    private String filter;
 
     @Override
     protected void performLiquibaseTask(Liquibase liquibase) throws LiquibaseException
     {
-        liquibase.generateDocumentation(outputDirectory);
+        liquibase.generateDocumentation(outputDirectory,  new Contexts(), new LabelExpression(), filter);
     }
 
 
@@ -31,4 +39,7 @@ public class LiquibaseDBDocMojo extends AbstractLiquibaseChangeLogMojo {
         return outputDirectory;
     }
 
+    public String getFilter() {
+        return filter;
+    }
 }

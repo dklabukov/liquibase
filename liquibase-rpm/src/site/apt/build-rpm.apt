@@ -73,7 +73,7 @@ target/rpm/liquibase/RPMS/noarch/
 
 
 +-------------------------------------------
-yum --nogpgcheck localinstall  liquibase-3.3.0-SNAPSHOT20140618000252.noarch.rpm
+yum --nogpgcheck localinstall  liquibase-3.3.0-sintkom-SNAPSHOT20140618000252.noarch.rpm
 +-------------------------------------------
 
     To rapidly check if liquibase is already installed :
@@ -94,7 +94,7 @@ yum info liquibase.noarch
 Installed Packages
 Name        : liquibase
 Arch        : noarch
-Version     : 3.3.0
+Version     : 3.3.0-sintkom
 Release     : SNAPSHOT20140618000252
 Size        : 2.6 M
 Repo        : installed
@@ -130,7 +130,7 @@ Dependencies Resolved
  Package                                Arch                                Version                                                   Repository                              Size
 ===================================================================================================================================================================================
 Removing:
- liquibase                              noarch                              3.3.0-SNAPSHOT20140618000252                              installed                              2.6 M
+ liquibase                              noarch                              3.3.0-sintkom-SNAPSHOT20140618000252                              installed                              2.6 M
 
 Transaction Summary
 ===================================================================================================================================================================================
@@ -144,7 +144,7 @@ Running Transaction Test
 Transaction Test Succeeded
 Running Transaction
 Warning: RPMDB altered outside of yum.
-  Erasing    : liquibase-3.3.0-SNAPSHOT20140618000252.noarch                                                                                                                   1/1 
-  Verifying  : liquibase-3.3.0-SNAPSHOT20140618000252.noarch
+  Erasing    : liquibase-3.3.0-sintkom-SNAPSHOT20140618000252.noarch                                                                                                                   1/1
+  Verifying  : liquibase-3.3.0-sintkom-SNAPSHOT20140618000252.noarch
 +-------------------------------------------
 
