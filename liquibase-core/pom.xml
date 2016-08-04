@@ -345,4 +345,17 @@
         </profile>
     </profiles>
 
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>central</name>
+            <url>https://artifactory.tprs.ru/artifactory/plugins-release-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>snapshots</name>
+            <url>https://artifactory.tprs.ru/artifactory/plugins-snapshot-local</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 </project>
