@@ -28,9 +28,9 @@
     </issueManagement>
 
     <scm>
-        <connection>scm:git:https://github.com/liquibase/liquibase.git</connection>
-        <url>scm:git:https://github.com/liquibase/liquibase.git</url>
-        <developerConnection>scm:git:https://github.com/liquibase/liquibase.git</developerConnection>
+        <connection>scm:git:https://github.com/dklabukov/liquibase.git</connection>
+        <url>scm:git:https://github.com/dklabukov/liquibase.git</url>
+        <developerConnection>scm:git:https://github.com/dklabukov/liquibase.git</developerConnection>
     </scm>
 
     <developers>
@@ -58,7 +58,7 @@
         <module>liquibase-core</module>
         <module>liquibase-maven-plugin</module>
         <module>liquibase-osgi</module>
-        <module>liquibase-cdi</module>
+        <!--<module>liquibase-cdi</module>-->
         <module>liquibase-integration-tests</module>
         <module>liquibase-debian</module>
     </modules>
@@ -366,14 +366,14 @@
 
     <distributionManagement>
         <repository>
-            <id>sonatype-nexus-staging</id>
-            <name>Sonatype Production Repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+            <id>central</id>
+            <name>central</name>
+            <url>https://artifactory.tprs.ru/artifactory/libs-release-local</url>
         </repository>
         <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sontatype Snapshot Repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <id>snapshots</id>
+            <name>snapshots</name>
+            <url>https://artifactory.tprs.ru/artifactory/libs-snapshot-local</url>
         </snapshotRepository>
     </distributionManagement>
 
